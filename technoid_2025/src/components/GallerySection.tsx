@@ -1,3 +1,4 @@
+"use client";
 export default function GallerySection() {
   const images = [
     "https://placehold.co/600x400/000/00f3ff?text=Technoid_01",
