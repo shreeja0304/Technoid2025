@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Orbitron, Rajdhani } from "next/font/google";
-import "./globals.css"; // This error will be fixed when you create the file above
+import "./globals.css"; 
 import NavBar from "@/components/sections/navBar";
 import Footer from "@/components/sections/footer";
 import SmoothScroll from "@/components/SmoothScroll";
