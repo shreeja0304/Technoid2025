@@ -9,7 +9,7 @@ import React from "react";
 export default function GalleryPage() {
   // Generates paths for 15 images: /images/gallery/1.jpg to /images/gallery/15.jpg
   // Ensure you create 'public/images/gallery' and upload files named 1.jpg, 2.jpg, etc.
-  const images = Array.from({ length: 15 }, (_, i) => `/images/gallery/${i + 1}.jpg`);
+  const images = Array.from({ length: 15 }, (_, i) => `/images/gallery/${i + 1}.JPG`);
 
   return (
     <main className="min-h-screen bg-cyber-black hologram-background">
