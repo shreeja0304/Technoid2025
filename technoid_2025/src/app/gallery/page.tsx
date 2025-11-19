@@ -2,63 +2,69 @@
 
 import { TitleBanner } from "@/components/sections/TitleBanner";
 import { motion } from "framer-motion";
-// Removed: Maximize2, Share2, Download icons
 import CyberImage from "@/components/CyberImage";
 import React from "react";
 
 export default function GalleryPage() {
+  // Generate array of 15 images (1.JPG to 15.JPG)
   const images = Array.from({ length: 15 }, (_, i) => `/images/gallery/${i + 1}.JPG`);
 
   return (
-    <main className="min-h-screen bg-cyber-black hologram-background">
-      <TitleBanner 
-        title="VISUAL_ARCHIVE" 
-        subtitle="Decrypted Memory Shards..." 
-      />
+    <main className="min-h-screen bg-cyber-black hologram-background overflow-x-hidden">
+      
+      {/* --- TITLE BANNER (Now Responsive) --- */}
+      {/* We override the className to ensure the text wraps correctly on mobile */}
+      <div className="pt-24 pb-12 px-4 text-center">
+         <h1 className="text-4xl sm:text-6xl md:text-8xl font-orbitron font-black text-white glitch-text break-words leading-tight">
+           VISUAL_ARCHIVE
+         </h1>
+         <p className="text-neon-cyan font-mono mt-4 text-sm md:text-lg animate-pulse">
+           Decrypted Memory Shards...
+         </p>
+      </div>
 
-      <section className="max-w-[1800px] mx-auto py-12 px-4 md:px-8">
+      <section className="max-w-[1800px] mx-auto px-4 md:px-8 pb-24">
         
-        {/* Masonry Grid Wrapper via CSS Columns */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8 p-4">
+        {/* Masonry Grid Wrapper - Responsive Columns */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           {images.map((src, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: (index % 3) * 0.1 }}
+              transition={{ duration: 0.6, delay: (index % 3) * 0.1 }}
               viewport={{ once: true }}
               className="break-inside-avoid"
             >
               {/* Card Container */}
-              <div className="group relative bg-cyber-black border-2 border-transparent rounded-lg overflow-hidden transition-all duration-500 hover:border-neon-pink hover:shadow-[0_0_40px_rgba(255,0,255,0.2)]">
+              <div className="group relative bg-cyber-black border-2 border-transparent rounded-lg overflow-hidden transition-all duration-300 hover:border-neon-pink hover:shadow-[0_0_20px_rgba(255,0,255,0.3)]">
                 
                 {/* --- IMAGE CONTAINER --- */}
-                <div className="relative w-full h-auto">
+                <div className="relative w-full">
                    <CyberImage
                     src={src}
                     alt={`Gallery Artifact ${index + 1}`}
-                    className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-auto object-contain block" 
                   />
                   
-                  {/* Overlay for subtle darkening/scanline on hover (optional) */}
-                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {/* Darken Overlay on Hover */}
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
-                {/* --- HOVER NEON PINK FRAME --- */}
+                {/* --- HOVER NEON FRAME (Responsive Corners) --- */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  {/* Top Left */}
+                  <div className="absolute top-2 left-2 w-4 h-4 md:w-6 md:h-6 border-t-2 border-l-2 border-neon-pink rounded-tl-sm" />
+                  {/* Top Right */}
+                  <div className="absolute top-2 right-2 w-4 h-4 md:w-6 md:h-6 border-t-2 border-r-2 border-neon-pink rounded-tr-sm" />
+                  {/* Bottom Left */}
+                  <div className="absolute bottom-2 left-2 w-4 h-4 md:w-6 md:h-6 border-b-2 border-l-2 border-neon-pink rounded-bl-sm" />
+                  {/* Bottom Right */}
+                  <div className="absolute bottom-2 right-2 w-4 h-4 md:w-6 md:h-6 border-b-2 border-r-2 border-neon-pink rounded-br-sm" />
                   
-                  {/* Cyberpunk Corner Brackets (Neon Pink) */}
-                  <div className="absolute top-3 left-3 w-8 h-8 border-t-2 border-l-2 border-neon-pink rounded-tl-md" />
-                  <div className="absolute top-3 right-3 w-8 h-8 border-t-2 border-r-2 border-neon-pink rounded-tr-md" />
-                  <div className="absolute bottom-3 left-3 w-8 h-8 border-b-2 border-l-2 border-neon-pink rounded-bl-md" />
-                  <div className="absolute bottom-3 right-3 w-8 h-8 border-b-2 border-r-2 border-neon-pink rounded-br-md" />
-                  
-                  {/* Animated Scanline (Subtle, doesn't distort image) */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-pink/5 to-transparent animate-scan z-10" />
-                  
+                  {/* Animated Scanline */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neon-pink/10 to-transparent animate-scan z-10" />
                 </div>
-
-                {/* Removed: File Info, Download, Share, Maximize buttons */}
 
               </div>
             </motion.div>
