@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const footerLinks = [
   { name: "Home", href: "/" },
   { name: "Event", href: "/events" },
-  { name: "RuleBook", href: "/rulebook" },
+  { name: "RuleBook", href: "/rulebook.pdf" },
   { name: "Schedule", href: "/schedule" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact Us", href: "/contact" },
