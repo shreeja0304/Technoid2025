@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="z-20 text-center space-y-6 max-w-5xl mx-auto relative mt-20">
         
         {/* Main Title: TECHNOID */}
-        <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[9rem] font-black font-orbitron tracking-tighter text-white drop-shadow-2xl leading-none">
+        <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-9xl font-black font-orbitron tracking-tighter text-white drop-shadow-2xl leading-none">
           TECHNOID'25
         </h1>
         
