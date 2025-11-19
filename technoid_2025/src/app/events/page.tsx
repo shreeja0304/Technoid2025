@@ -159,7 +159,7 @@ export default function EventsPage() {
                     </p>
 
                     <Button asChild variant="default" className="w-full bg-neon-cyan text-black hover:bg-white font-orbitron font-bold tracking-wider py-6 text-lg">
-                        <Link href="#">
+                        <Link href="https://registration.sxcjpr.edu.in/event/technoid-2025/">
                             REGISTER NOW
                         </Link>
                     </Button>
