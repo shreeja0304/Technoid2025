@@ -1,37 +1,27 @@
 import { TitleBanner } from "@/components/sections/TitleBanner";
+import CyberImage from "@/components/CyberImage";
 
 export default function SponsorsPage() {
+  const sponsorsImage = "/images/Sponsors.jpg"; 
+
   return (
-    <main className="min-h-screen">
-      <TitleBanner title="ALLIANCE_PARTNERS" subtitle="Our Valued Investors" />
+    <main className="min-h-screen bg-cyber-black">
+      <TitleBanner 
+        title="ALLIANCE_PARTNERS" 
+        subtitle="Our Valued Investors" 
+      />
       
-      <section className="max-w-7xl mx-auto py-20 px-6 text-center">
-        {/* TIER 1 */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-orbitron text-neon-cyan mb-10 border-b border-neon-cyan/30 inline-block pb-2">
-            TITANIUM_TIER
-          </h2>
-          <div className="flex flex-wrap justify-center gap-8">
-            <div className="w-72 h-36 border border-neon-cyan/50 bg-cyber-gray/80 flex items-center justify-center text-gray-400 font-orbitron text-2xl">
-              [SPONSOR_LOGO]
-            </div>
-          </div>
+      <section className="max-w-6xl mx-auto py-16 px-4 md:px-8 flex justify-center">
+        
+        {/* Sponsors Image Container */}
+        <div className="relative w-full max-w-5xl clip-tile border-2 border-neon-pink/30 bg-cyber-gray/20 p-2 md:p-4 shadow-[0_0_40px_rgba(255,0,255,0.15)] hover:shadow-[0_0_60px_rgba(255,0,255,0.25)] transition-shadow duration-500">
+          <CyberImage 
+            src={sponsorsImage}
+            alt="Event Sponsors"
+            className="w-full h-auto object-contain rounded-sm"
+          />
         </div>
 
-        {/* TIER 2 */}
-        <div>
-          <h2 className="text-3xl font-orbitron text-neon-yellow mb-10 border-b border-neon-yellow/30 inline-block pb-2">
-            GOLD_TIER
-          </h2>
-          <div className="flex flex-wrap justify-center gap-6">
-             <div className="w-52 h-28 border border-neon-yellow/30 bg-cyber-gray/60 flex items-center justify-center text-gray-500 font-mono">
-               [SPONSOR_LOGO]
-             </div>
-             <div className="w-52 h-28 border border-neon-yellow/30 bg-cyber-gray/60 flex items-center justify-center text-gray-500 font-mono">
-               [SPONSOR_LOGO]
-             </div>
-          </div>
-        </div>
       </section>
     </main>
   );
