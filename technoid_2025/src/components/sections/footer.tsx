@@ -16,7 +16,7 @@ export default function Footer() {
   const mapDirectLink = "https://maps.app.goo.gl/DWpwowodoe99CAik6";
   
 
-  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.859600127221!2d75.58809407509503!3d26.84075487672807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4b2238380771%3A0x1226022c43c33a9a!2sSt.%20Xavier's%20College%2C%20Jaipur!5e0!3m2!1sen!2sus!4v1731904280731!5m2!1sen!2sus";
+  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.103286576688!2d75.67434067649914!3d26.804839676711634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db407a0ff3999%3A0x4e104046d66ef7ca!2sSt.%20Xavier&#39;s%20College%20Jaipur!5e0!3m2!1sen!2sin!4v1731333922625!5m2!1sen!2sin";
 
   return (
     <footer className="relative w-full border-t border-neon-cyan/20 bg-cyber-black text-gray-400 py-12 md:py-16 px-6 md:px-12">
