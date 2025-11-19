@@ -12,15 +12,12 @@ export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-cyber-black hologram-background overflow-x-hidden">
       
-      {/* --- TITLE BANNER (Now Responsive) --- */}
-      {/* We override the className to ensure the text wraps correctly on mobile */}
+
       <div className="pt-24 pb-12 px-4 text-center">
          <h1 className="text-4xl sm:text-6xl md:text-8xl font-orbitron font-black text-white glitch-text break-words leading-tight">
-           VISUAL_ARCHIVE
+          GALLERY
          </h1>
-         <p className="text-neon-cyan font-mono mt-4 text-sm md:text-lg animate-pulse">
-           Decrypted Memory Shards...
-         </p>
+        
       </div>
 
       <section className="max-w-[1800px] mx-auto px-4 md:px-8 pb-24">
