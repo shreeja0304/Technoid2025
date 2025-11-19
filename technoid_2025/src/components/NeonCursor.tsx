@@ -6,9 +6,9 @@ import { motion, useSpring } from "framer-motion";
 export default function NeonCursor() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Spring physics for smooth movement
-  const mouseX = useSpring(0, { stiffness: 500, damping: 28 });
-  const mouseY = useSpring(0, { stiffness: 500, damping: 28 });
+  // Spring physics for smooth but responsive movement
+  const mouseX = useSpring(0, { stiffness: 1000, damping: 40 });
+  const mouseY = useSpring(0, { stiffness: 1000, damping: 40 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -35,14 +35,17 @@ export default function NeonCursor() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-screen"
+      className="fixed top-0 left-0 pointer-events-none z-[9999] hidden md:block mix-blend-screen"
       style={{ x: mouseX, y: mouseY, translateX: "-50%", translateY: "-50%" }}
     >
-      {/* Core Glow */}
-      <div className="w-8 h-8 bg-neon-cyan rounded-full blur-md opacity-60" />
+      {/* 1. Hard Core (The actual pointer) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,1)] z-20" />
+
+      {/* 2. Inner Bright Neon Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-neon-cyan rounded-full blur-sm opacity-90 z-10" />
       
-      {/* Outer Halo */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-neon-pink rounded-full blur-3xl opacity-20 animate-pulse" />
+      {/* 3. Outer Halo (Ambient Light) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-neon-cyan/40 rounded-full blur-2xl opacity-60 animate-pulse" />
     </motion.div>
   );
 }
