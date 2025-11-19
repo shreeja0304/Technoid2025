@@ -77,7 +77,7 @@ export default function Home() {
                     />
                     {/* Overlay Gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
-                        <p className="text-neon-cyan font-mono tracking-widest text-lg">TIMELINE_DATA</p>
+                 
                     </div>
                 </div>
                 <Button asChild size="lg" className="w-full bg-neon-cyan text-black hover:bg-white font-orbitron font-bold tracking-wider py-6 text-lg shadow-[0_0_15px_rgba(0,243,255,0.3)]">
@@ -97,7 +97,7 @@ export default function Home() {
                     />
                     {/* Overlay Gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
-                        <p className="text-neon-pink font-mono tracking-widest text-lg">VISUAL_ARCHIVE</p>
+                    
                     </div>
                 </div>
                 <Button asChild variant="outline" size="lg" className="w-full border-neon-pink text-neon-pink hover:bg-neon-pink hover:text-black font-orbitron font-bold tracking-wider py-6 text-lg shadow-[0_0_15px_rgba(255,0,255,0.15)]">
