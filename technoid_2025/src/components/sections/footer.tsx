@@ -1,14 +1,13 @@
 import Link from "next/link";
 import { MapPin, Mail, Youtube, Instagram } from "lucide-react";
 
-// Footer navigation links, matching the screenshot
+
 const footerLinks = [
   { name: "Home", href: "/" },
   { name: "Event", href: "/events" },
-  { name: "RuleBook", href: "/rulebook" }, // Assuming you will create this page
-  { name: "Schedule", href: "/schedule" }, // Assuming you will create this page
+  { name: "RuleBook", href: "/rulebook" }, 
+  { name: "Schedule", href: "/schedule" }, 
   { name: "Gallery", href: "/gallery" },
-  // { name: "Organizers", href: "/team" }, // Using /team from our previous structure // REMOVED
   { name: "Contact Us", href: "/contact" },
 ];
 
@@ -20,11 +19,11 @@ export default function Footer() {
         {/* --- LEFT COLUMN: QR SCANNER --- */}
         <div className="flex flex-col items-center md:items-start">
           <h3 className="font-orbitron text-lg text-white mb-4 tracking-widest">
-            REGISTRATION_SCANNER
+            REGISTRATION SCANNER
           </h3>
           <div className="border-2 border-neon-cyan/50 p-2 bg-cyber-gray">
             <img
-              src="https://placehold.co/256x256/050505/00f3ff?text=QR+CODE"
+              src="/qrcode.jpg"
               alt="Registration QR Code"
               width={256}
               height={256}
@@ -32,11 +31,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* --- CENTER COLUMN: NAV & INFO --- */}
+
         <div className="flex flex-col items-center text-center">
-          {/* Logo Placeholder */}
+      
           <Link href="/" className="text-4xl font-orbitron font-bold text-white tracking-widest mb-8">
-            TECHNOID<span className="text-neon-cyan">_25</span>
+            TECHNOID<span className="text-neon-cyan"></span>
           </Link>
           
           {/* Footer Nav */}
@@ -81,11 +80,11 @@ export default function Footer() {
         {/* --- RIGHT COLUMN: MAP --- */}
         <div className="flex flex-col items-center md:items-end">
           <h3 className="font-orbitron text-lg text-white mb-4 tracking-widest">
-            LOCATION_GRID
+            LOCATION
           </h3>
           <div className="w-full h-80 border-2 border-neon-cyan/50 p-1 bg-cyber-gray">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.859600127221!2d75.58809407509503!3d26.84075487672807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4b2238380771%3A0x1226022c43c33a9a!2sSt.%20Xavier's%20College%2C%20Jaipur!5e0!3m2!1sen!2sus!4v1731904280731!5m2!1sen!2sus"
+              src="https://maps.app.goo.gl/DWpwowodoe99CAik6"
               width="100%"
               height="100%"
               style={{ border: 0 }}
