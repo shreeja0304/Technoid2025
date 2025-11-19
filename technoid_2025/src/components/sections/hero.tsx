@@ -46,7 +46,7 @@ export default function Hero() {
         <div className="pt-8">
           <Button asChild size="lg" className="relative overflow-hidden group bg-transparent border-2 border-neon-yellow text-neon-yellow hover:bg-neon-yellow hover:text-black font-orbitron font-bold text-lg md:text-xl px-10 py-8 transition-all duration-300 shadow-[0_0_20px_rgba(255,238,0,0.2)] hover:shadow-[0_0_40px_rgba(255,238,0,0.6)]">
             <Link href="/events">
-              <span className="relative z-10">INITIALIZE PROTOCOL</span>
+              <span className="relative z-10">EVENTS</span>
               <div className="absolute inset-0 h-full w-full bg-white/20 -skew-x-12 -translate-x-full group-hover:animate-shine" />
             </Link>
           </Button>
