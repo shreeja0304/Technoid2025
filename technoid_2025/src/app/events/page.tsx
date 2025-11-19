@@ -104,7 +104,7 @@ const eventCategories = [
 export default function EventsPage() {
   return (
     <main className="min-h-screen bg-cyber-black hologram-background">
-      <TitleBanner title="EVENTS_PROTOCOL" subtitle="Loading Event Modules..." />
+      <TitleBanner title="EVENTS" />
       
       <section className="max-w-7xl mx-auto py-16 px-6">
         {eventCategories.map((category) => (
