@@ -7,7 +7,7 @@ export default function SponsorsPage() {
   return (
     <main className="min-h-screen bg-cyber-black">
       <TitleBanner 
-        title="ALLIANCE_PARTNERS" 
+        title="SPONSORS" 
         subtitle="Our Valued Investors" 
       />
       
