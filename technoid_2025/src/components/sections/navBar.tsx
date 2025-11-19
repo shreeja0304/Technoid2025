@@ -28,7 +28,7 @@ export default function NavBar() {
     { name: "CONTACT", href: "/contact" },
   ];
 
-  const registrationLink = "https://forms.gle/your-registration-link"; 
+  const registrationLink = "https://registration.sxcjpr.edu.in/event/technoid-2025/"; 
 
   return (
     <nav
